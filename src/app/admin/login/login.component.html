@@ -1,0 +1,24 @@
+<div class="container">
+  <div style="max-width: 500px; margin: auto; padding: 50px 0;">
+  <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+      <div style="display: flex; flex-direction: column;gap: 30px;">
+            <input type="text" class="form-control" placeholder="UserName" formControlName="username">
+            <div *ngIf="!loginform.controls.username?.valid&&(loginform.controls.username?.dirty||loginform.controls.username?.touched)">
+              <pre>Tên đăng nhập không để trống</pre>
+            </div>
+            <input type="password" class="form-control" placeholder="Password" formControlName="password">
+            <div *ngIf="!loginform.controls.password?.valid&&(loginform.controls.password?.dirty||loginform.controls.password?.touched)">
+              <pre>Mật khẩu không nhỏ hơn 6 kí tự</pre>
+            </div>
+            <!-- <input type="email" class="form-control" placeholder="Email" formControlName="email">
+            <div *ngIf="!loginform.controls.email?.valid&&(loginform.controls.email?.dirty||loginform.controls.email?.touched)">
+              <pre>Không đúng định dạng email</pre>
+            </div> -->
+            <button class="btn btn-primary" type="submit" [disabled]="!loginform.valid">Đăng nhập</button>
+            <div class="mess">
+              {{mess}}
+            </div>
+      </div>
+  </form> 
+</div>
+</div>

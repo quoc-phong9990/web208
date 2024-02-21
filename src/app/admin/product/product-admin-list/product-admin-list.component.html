@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Hình ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá tiền</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of products; track products.id){
+            <tr>
+                <td></td>
+                <td><img src="{{product.image}}" width="80"/></td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td><a href="/admin/edit-product/{{product.id}}" class="btn btn-primary">Sửa</a><a class="btn btn-danger" (click)="handleDelProduct(product.id)">Xóa</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+a {
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Set text color */
+    font-weight: bold; /* Set font weight to bold */
+    /* Add any other styles you want */
+}
+
+/* Optional: Hover styles for the link */
+a:hover {
+    color: #0066cc; /* Change text color on hover */
+    /* Add any other hover styles you want */
+}

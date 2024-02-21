@@ -1,0 +1,18 @@
+<div id="content">
+    <div class="container">
+        <form [formGroup]="formfilter" (ngSubmit)="onFilter()">
+                <input type="number" formControlName="minprice"/>
+                <input type="number" formControlName="maxprice"/>
+                <button type="submit" class="btn btn-primary">seach</button>
+        </form>
+      <div class="row">    
+            <div *ngFor="let product of products"class="product1 col-6 col-sm-4 col-md-4 col-lg-3">
+                <img src="{{product.image}}" width="400px" height="400px">                
+                <h3><a href = "/product-detail/{{product.id}}">{{product.name}}</a></h3>
+                <span class="price">{{product.price}}</span><br>
+                <a class="btn btn-danger" (click)="addToCart(product.id,product.name,product.image,product.price)">Add to cart</a>
+            </div>
+    </div>      
+    </div>
+</div>
+

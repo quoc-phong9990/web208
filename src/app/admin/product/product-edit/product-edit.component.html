@@ -1,0 +1,16 @@
+<div class="container">
+    <form [formGroup]="productForm"  class="d-flex fd-column" style="margin: 20px 0;" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Tên sản phẩm" formControlName = "name" class="form-control"> 
+        <select class="form-control" formControlName="cate_id">
+            @for(cat of category;track category.id){
+                <option value="{{cat.id}}">{{cat.name}}</option>
+            }
+        </select>
+        <input type="number" placeholder="Giá sản phẩm" formControlName = "price" class="form-control">
+        <input type="text" placeholder="Ảnh sản phẩm"formControlName = "image" class="form-control">
+        <textarea formControlName = "detail" class="form-control">
+        </textarea>
+        <pre>{{mess}}</pre>
+        <button type="submit" class="btn btn-primary">Cập nhật sản phẩm</button>
+    </form>
+</div>

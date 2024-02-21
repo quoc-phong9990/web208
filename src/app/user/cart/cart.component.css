@@ -1,0 +1,42 @@
+#cart {
+    margin: 20px;
+}
+
+#cart h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#cart th, #cart td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#cart th {
+    background-color: #f2f2f2;
+}
+
+#cart img {
+    max-width: 100%;
+    height: auto;
+}
+
+#cart input {
+    width: 60px;
+}
+
+#cart span {
+    font-weight: bold;
+    font-size: 18px;
+}
+.button {
+    text-decoration: none;
+    background-color: blue;
+}

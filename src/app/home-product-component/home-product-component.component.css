@@ -1,0 +1,47 @@
+img{max-width: 100%;}
+#content .container form {
+    margin-bottom: 20px;
+}
+
+#content .container form input {
+    margin-right: 10px;
+}
+#content .container .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content .container .row .product1 {
+    margin-bottom: 20px;
+}
+
+#content .container .row .product1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+#content .container .row .product1 h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#content .container .row .product1 .price {
+    font-weight: bold;
+}
+
+#content .container .row .product1 a.btn-danger {
+    margin-top: 10px;
+}
+.container form input{
+    border-radius: 10px;
+    height: 45px;
+
+}
+.container form button{
+    border-radius: 10px;
+    height: 45px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+
+    
+}

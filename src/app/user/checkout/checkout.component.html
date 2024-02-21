@@ -1,0 +1,41 @@
+<div id="checkout" >
+    <pre>{{mess}}</pre>
+    <h1>Thông tin đặt hàng</h1>
+        <form [formGroup]="formCheckout" (ngSubmit)="onSubmit()">
+            <label>Họ tên</label>
+            <input type="text" class="form-control" formControlName="name"/>
+            <label>Địa chỉ</label>
+            <input type="text" class="form-control" formControlName="address"/>
+            <label>Số điện thoại</label>
+            <input type="text" class="form-control" formControlName="phone"/>
+            <button class="btn btn-danger" [disabled]="!formCheckout.valid">Đặt hàng</button>
+         
+        </form>
+     
+    
+    <h2>Thông tin giỏ hàng</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cart of carts; let i = index">
+                <td>{{i+1}}</td>
+                <td><img width="60" src="{{cart.image}}"/></td>
+                <td>{{cart.name}}</td>
+                <td>{{cart.quantity}}</td>
+                <td>{{cart.price}}</td>
+                <td>{{cart.price*cart.quantity}}</td>
+                </tr>
+        </tbody>
+    </table>  
+    <span>Tổng tiền: {{total}}</span>  
+  
+</div>
